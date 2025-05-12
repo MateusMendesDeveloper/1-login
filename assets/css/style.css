@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores */
+    --logo-icon: #305F72;
+    --logo-text: #D4AF37;
+    --background: #FAFAF9;
+    --title-text: #1F1F1F;
+    --body-text: #333333;
+    --button-bg: #305F72;
+    --button-text: #FFFFFF;
+    --link-color: #305F72;
+    --border-color: #E0E0E0;
+
+    --hover-logo-icon: #3C6F88;
+    --hover-logo-text: #E0C45A;
+    --hover-button-bg: #3C6F88;
+    --hover-link-color: #3C6F88;
+    --hover-border-color: #CFCFCF;
+
+    /* Fonts */
+    --font-logo: "Cormorant Garamond", serif;
+    --font-texto: "Merriweather", serif;
+}
+
+.tema-escuro {
+    --logo-icon: #B4D4E3;
+    --logo-text: #EEDC8A;
+    --background: #1C1C1E;
+    --title-text: #FFFFFF;
+    --body-text: #CCCCCC;
+    --button-bg: #D4AF37;
+    --button-text: #1C1C1E;
+    --link-color: #B4D4E3;
+    --border-color: #333333;
+
+    --hover-logo-icon: #CBE6F2;
+    --hover-logo-text: #F2E7A6;
+    --hover-button-bg: #E0C45A;
+    --hover-link-color: #CBE6F2;
+    --hover-border-color: #444444;
+}
+
+button,
+input {
+    font-family: var(--font-texto);
+}
+
+body {
+    max-width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-texto);
+}
+
+.login-content {
+    max-width: 600px;
+    width: 600px;
+    max-height: 600px;
+    height: 600px;
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+    box-shadow: 2px 2px 5px var(--border-color);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    color: var(--logo-text);
+    font-family: var(--font-logo);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.logo-img {
+    background-image: url(../image/icone-claro.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.tema-escuro .logo-img {
+    background-image: url(../image/icone-escuro.png);
+}
+
+.login-content h2 {
+    color: var(--title-text);
+    font-size: 1.6rem;
+}
+
+.email-content,
+.senha-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.email-content label,
+.senha-content label {
+    color: var(--body-text);
+    font-size: 1.1rem;
+}
+
+.email-content input,
+.senha-content input {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.email-content input:hover,
+.senha-content input:hover {
+    background-color: var(--hover-button-bg);
+    border: 2.5px solid var(--hover-border-color);
+}
+
+.email-content input:focus,
+.senha-content input:focus {
+    border: 2.5px solid var(--hover-border-color);
+    outline: none;
+}
+
+#email::-webkit-input-placeholder,
+#senha::-webkit-input-placeholder {
+    color: var(--button-text);
+    opacity: 0.4;
+}
+
+.senha-input-content {
+    position: relative;
+    width: 100%;
+
+}
+
+.senha-input-content input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+
+#mostrarSenha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding-left: 0.5rem;
+    cursor: pointer;
+    color: var(--button-text);
+
+}
+
+#mostrarSenha:hover {
+    color: var(--button-text);
+    opacity: 0.8;
+}
+
+#erroEmail,
+#erroSenha {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+}
+
+#enviar {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    max-width: 300px;
+    width: 150px;
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+#enviar:hover {
+    background-color: var(--hover-button-bg);
+    border: 2.5px solid var(--border-color);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.contato-content {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.contato-content li a {
+    color: var(--link-color);
+}
+
+.contato-content li a:hover {
+    color: var(--hover-link-color);
+}
+
+.tema-btn {
+    opacity: 0;
+    position: absolute;
+}
+
+.tema-content {
+    background-color: var(--button-bg);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.tema-content .ball {
+    background-color: var(--button-text);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.tema-btn:checked+.tema-content .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon,
+.fa-sun {
+    color: var(--button-text);
+}

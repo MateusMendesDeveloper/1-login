@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+
+    <title>AveMariar - Login</title>
+</head>
+
+<body>
+    <section class="login-content">
+        <div class="logo-content">
+            <div src="./assets/image/icone-claro.png" alt="Icone" class="logo-img"></div>
+            <h1 class="logo-text">AveMariar</h1>
+        </div>
+        <h2>Login</h2>
+        <form id="form">
+            <div class="email-content">
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="email" onblur="verificarEmail()" placeholder="Insira seu email">
+                <span id="erroEmail"></span>
+            </div>
+            <div class="senha-content">
+                <label for="senha">Senha: </label>
+                <div class="senha-input-content">
+                    <input type="password" id="senha" name="senha" onblur="verificarSenha()" placeholder="Insira sua senha">
+                    <button type="button" id="mostrarSenha">👁</button>
+                </div>
+                <span id="erroSenha"></span>
+            </div>
+            <button id="enviar" disabled="true">Entrar</button>
+        </form>
+        <footer>
+            <ul class="contato-content">
+                <li><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+            <div>
+                <input type="checkbox" class="tema-btn" id="tema">
+                <label class="tema-content" for="tema">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </footer>
+    </section>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
