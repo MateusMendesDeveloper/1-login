@@ -31,18 +31,18 @@
         <form id="form">
             <div class="email-content">
                 <label for="email">E-mail: </label>
-                <input type="email" id="email" name="email" onblur="verificarEmail()" placeholder="Insira seu email">
+                <input type="email" id="email" name="email" onblur="verificarEmail()" placeholder="Insira seu email" required>
                 <span id="erroEmail"></span>
             </div>
             <div class="senha-content">
                 <label for="senha">Senha: </label>
                 <div class="senha-input-content">
-                    <input type="password" id="senha" name="senha" onblur="verificarSenha()" placeholder="Insira sua senha">
+                    <input type="password" id="senha" name="senha" onblur="verificarSenha()" placeholder="Insira sua senha" required>
                     <button type="button" id="mostrarSenha">👁</button>
                 </div>
                 <span id="erroSenha"></span>
             </div>
-            <button id="enviar" disabled="true">Entrar</button>
+            <button type="submit" id="enviar">Entrar</button>
         </form>
         <footer>
             <ul class="contato-content">
